@@ -13,9 +13,11 @@ export const CartSlice = createSlice({
         if (existingItem) {
             // If item already exists in the cart, increase its quantity
             existingItem.quantity++;
+            
         } else {
             // If item does not exist, add it to the cart with quantity 1
             state.items.push({ name, image, cost, quantity: 1 });
+
         }
 
     },
