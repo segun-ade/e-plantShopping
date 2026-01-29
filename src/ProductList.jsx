@@ -313,7 +313,7 @@ function ProductList({ onHomeClick }) {
             className={CartItems.find(item => item.name === plant.name) ? "product-button btn-disabled" : "product-button"} /*addedToCart[plant.name]*/
             onClick={() => handleAddToCart(plant)} // Handle adding plant to cart
           >
-            Add to Cart
+              {addedToCart[plant.name] ? Added to Cart : Add to Cart}
           </button>
         </div>
       ))}
